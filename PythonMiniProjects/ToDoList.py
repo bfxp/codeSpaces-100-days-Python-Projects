@@ -9,7 +9,7 @@ def createTask():
 
 def deleteTask():
     #Listing the the whole list of tasks
-    listTask()
+    #listTask()
     try:
         taskToDelete = int(input("Enter the # of task to delete: "))
         if taskToDelete >= 0 and taskToDelete < len(tasks):
@@ -28,7 +28,7 @@ def listTask():
     else:
         print("Here are the current tasks:")
         for index, task in enumerate(tasks):
-            print(f"Task #{index}. {tasks}")
+            print(f"Task #{index}. {task}")
         
         
 if __name__ == "__main__":
