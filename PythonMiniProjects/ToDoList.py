@@ -3,7 +3,8 @@ tasks = []
 #Creating a createTask function to enter a string into the array
 def createTask():
     task = input("Please enter a task: ")
-    task.append(task)
+    #Adding the task to the array
+    tasks.append(task)
     print(f"The task '{task}' has been added to the list.")
 
 def deleteTask():
@@ -26,8 +27,8 @@ def listTask():
         print ("There are no tasks currently")
     else:
         print("Here are the current tasks:")
-        for index, value in enumerate(tasks):
-            print(f"Task #{index}. {task}")
+        for index, task in enumerate(tasks):
+            print(f"Task #{index}. {tasks}")
         
         
 if __name__ == "__main__":
@@ -38,7 +39,7 @@ if __name__ == "__main__":
         print("1. Create a new task")
         print("2. Lists tasks")
         print("3. Delete task")
-        print("Quit")
+        print("4. Quit")
         
         choice = input("Please enter your choice: ")
     
