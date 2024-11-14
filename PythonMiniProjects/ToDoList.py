@@ -1,3 +1,8 @@
+##Created by Bryan Xaysanavongphet 11/14/2024
+##Going off Shaun Halversons YT video
+## https://www.youtube.com/watch?v=aEIHZDv_23U
+
+
 tasks = []
 
 #Creating a createTask function to enter a string into the array
@@ -26,9 +31,13 @@ def listTask():
     if not (tasks):
         print ("There are no tasks currently")
     else:
+        print("\n")
+        print("----------------------------------")
         print("Here are the current tasks:")
         for index, task in enumerate(tasks):
             print(f"Task #{index}. {task}")
+        print("---------------------------------")
+        print("\n")
         
         
 if __name__ == "__main__":
