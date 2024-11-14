@@ -27,13 +27,11 @@ def listTask():
     else:
         print("Here are the current tasks:")
         for index, value in enumerate(tasks):
-            print(f"Task #{index, task}")
+            print(f"Task #{index}. {task}")
         
         
 if __name__ == "__main__":
-    
     print("Welcome to the To-Do List!")
-    
     while True:
         print("-----------------------------------")
         print("Please select a choice below.")
@@ -45,14 +43,15 @@ if __name__ == "__main__":
         choice = input("Please enter your choice: ")
     
     #Creating the if statements to call the functions that the user wants to access.
-    if (choice == "1"):
-        createTask()
-    elif (choice == "2"):
-        listTask()
-    elif(choice == "3"):
-        deleteTask()
-    elif(choice == "4"):
-        break
-    else:
-        print("Invalid input. Please try again.")
+        if (choice == "1"):
+            createTask()
+        elif (choice == "2"):
+            listTask()
+        elif(choice == "3"):
+            deleteTask()
+        elif(choice == "4"):
+            break
+        else:
+            print("Invalid input. Please try again.")
+
     print("Thank you for using the To Do list!")
