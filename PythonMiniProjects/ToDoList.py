@@ -5,17 +5,31 @@ def createTask():
     task = input("Please enter a task: ")
     task.append(task)
     print(f"The task '{task}' has been added to the list.")
-    
-def listTask():
 
 def deleteTask():
     #Listing the the whole list of tasks
     listTask()
     try:
         taskToDelete = int(input("Enter the # of task to delete: "))
-        if taskToDelete >= 0 and taskToDelete < len(tasks)
+        if taskToDelete >= 0 and taskToDelete < len(tasks):
+            #using the .pop function to remove the input 
+            tasks.pop(taskToDelete)
+            print(f"Task #{taskToDelete} has been deleted.")
+        else:
+            #If the # was lower than 0 or if higher than the amount of tasks that are inputted.
+            print(f"Task #{taskToDelete} was not found.")
     except:
         print("Invalid input.")
+        
+def listTask():
+    if not (tasks):
+        print ("There are no tasks currently")
+    else:
+        print("Here are the current tasks:")
+        for index, value in enumerate(tasks):
+            print(f"Task #{index, task}")
+        
+        
 if __name__ == "__main__":
     
     print("Welcome to the To-Do List!")
