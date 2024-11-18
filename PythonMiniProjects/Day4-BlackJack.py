@@ -17,14 +17,14 @@ def play():
 def win():
 
 def rules():
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
+    print("Welcome to Black Jack.")
+    print("If you have not played before, the rules are simple.")
+    print("You are given two cards, and they must total to the amount of 21.")
+    print("Aces are considered either the amount of 1 or 11.")
+    print("Your goal is to get to 21 or achieve a higher number than the opponent(dealer)")
+    print("If you go over 21, you automatically bust and lose.")
+    print("If the opponent(dealer) get's a higher number than you, then you will lose as well.")
+    print("Good luck! Have fun playing.")
     
 
 if __name__ == "__main__":
