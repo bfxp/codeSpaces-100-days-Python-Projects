@@ -14,15 +14,16 @@ def drawCardType():
 #Putting the face value and card type together into a string for the user to read.
 def cardResult():
     print(f"{drawCards()} of {drawCardType()}'s")
+    
+#Function for adding up the totals of the cards.
+def cardTotal():
+    
+#Dealer cards. Will have to draw cards until 17 or higher.
+def dealer():
 
 #Main game play. User will either keep drawing cards until 21 or stand if they like their number.
 def play():
 
-#Dealer cards. Will have to draw cards until 17 or higher.
-def dealer():
-
-#Function for winning the game?
-def win():
 
 #Rules to explain to the user how to play.
 def rules():
