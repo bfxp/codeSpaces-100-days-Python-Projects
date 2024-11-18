@@ -3,19 +3,28 @@
 
 import random
 
+#Drawing cards for the face value
 def drawCards():
     return random.cards(["A","2","3","4","5","6","7","8","9","10","Jack","Queen","King",])
 
+#Drawing for the type of cards
 def drawCardType():
     return random.cardType(["Spades", "Diamonds", "Heart", "Club"])
 
+#Putting the face value and card type together into a string for the user to read.
 def cardResult():
     print(f"{drawCards()} of {drawCardType()}'s")
 
+#Main game play. User will either keep drawing cards until 21 or stand if they like their number.
 def play():
 
+#Dealer cards. Will have to draw cards until 17 or higher.
+def dealer():
+
+#Function for winning the game?
 def win():
 
+#Rules to explain to the user how to play.
 def rules():
     print("Welcome to Black Jack.")
     print("If you have not played before, the rules are simple.")
@@ -27,6 +36,7 @@ def rules():
     print("Good luck! Have fun playing.")
     
 
+#Main
 if __name__ == "__main__":
     while True:
         print("----------------------------")
