@@ -2,12 +2,24 @@
 #11/19/24
 #Going off of https://www.youtube.com/watch?v=aryte85bt_M
 
-
+import random
 
 cards = []
 suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 ranks = ["A","2","3","4","5","6","7","8","9","10","J","Q","K",]
-
 for suit in suits:
     for rank in ranks:
-        print([suit, rank])
+        cards.append([suit, rank])
+        
+#Function for shuffling the cards.
+def shuffle():
+    random.shuffle(cards)
+
+#Deal function to deal one card
+def deal():
+    card = cards.pop()
+    return card
+
+shuffle()
+card = deal()
+print(card)
