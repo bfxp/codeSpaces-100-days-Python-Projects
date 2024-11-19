@@ -6,72 +6,29 @@ import random
 #Drawing cards for the face value
 def drawCards():
     return random.randint(1,13)
-
-#Drawing for the type of cards
-def drawCardType():
-    return random.cardType(["Spades", "Diamonds", "Heart", "Club"])
-
-#Putting the face value and card type together into a string for the user to read.
-def cardResult():
-    print(f"{drawCards()} of {drawCardType()}'s")
-    
-#Function for adding up the totals of the cards.
-# def cardTotal():
-#     Card = 1
-#     AceCard = "Ace"
-#     JackCard = "Jack"
-#     QueenCard = "Queen"
-#     KingCard = "King"
-    
-#     drawCards()
-    
-#     while True:
-#         if drawCards() == 1:
-#             Card = 1
-#         elif drawCards() == 2:
-#             Card = 2
-#         elif drawCards() == 3:
-#             Card = 3
-#         elif drawCards() == 4:
-#             Card = 4
-#         elif drawCards() == 5:
-#             Card = 5
-#         elif drawCards() == 6:
-#             Card = 6
-#         elif drawCards() == 7:
-#             Card = 7
-#         elif drawCards() == 8:
-#             Card = 8
-#         elif drawCards() == 9:
-#             Card = 9
-#         elif drawCards() == 10:
-#             Card = 10
-#         elif drawCards() == 11:
-#             Card = 11
-#             JackCard
-#         elif drawCards() == 12:
-#             Card = 12
-#             QueenCard
-#         elif drawCards() == 13:
-#             Card = 13
-#             KingCard
-#         else:
-#             break
-        
         
 #Dealer cards. Will have to draw cards until 17 or higher.
 def dealer():
     card1 = drawCards()
     card2 = drawCards()
-    #cardtype1 = drawCardType()
-    #cardtype2 = drawCardType()
-    #cardresult1 = cardResult()
-    #cardresult2 = cardResult()
     
     totalcard = card1 + card2
     #displayCard = cardresult1 + cardresult2
     print(f"The Dealer's cards are {card1} and {card2}. The total is: {totalcard}")
     #print(displayCard)
+    while True:
+        if totalcard < 17:
+            print("The dealers cards are lower than 17. Pulling another card...")
+            card3 = drawCards()
+            totalcard = totalcard + card3
+            print(f"The dealers cards are now: {totalcard}")
+        elif totalcard == 21:
+            print("The dealer got 21! You lose.")
+        elif totalcard > 21:
+            print("The dealer busted. You win!")
+        else:
+            return
+        
     
 #Main game play. User will either keep drawing cards until 21 or stand if they like their number.
 #def play():
