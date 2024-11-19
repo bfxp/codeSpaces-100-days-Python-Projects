@@ -3,31 +3,38 @@
 
 import random
 
+dealerCard = 0
+
 #Drawing cards for the face value
 def drawCards():
     return random.randint(1,13)
+
+def twentyOne()
+    
         
 #Dealer cards. Will have to draw cards until 17 or higher.
 def dealer():
     card1 = drawCards()
-    card2 = drawCards()
-    
+    card2 = drawCards()  
     totalcard = card1 + card2
-    #displayCard = cardresult1 + cardresult2
+   
     print(f"The Dealer's cards are {card1} and {card2}. The total is: {totalcard}")
-    #print(displayCard)
-    while True:
+    #
+    while totalcard <= 21:
         if totalcard < 17:
-            print("The dealers cards are lower than 17. Pulling another card...")
-            card3 = drawCards()
-            totalcard = totalcard + card3
-            print(f"The dealers cards are now: {totalcard}")
-        elif totalcard == 21:
-            print("The dealer got 21! You lose.")
-        elif totalcard > 21:
-            print("The dealer busted. You win!")
-        else:
-            return
+                print(f"The dealers card is lower than 17. Currently at {totalcard}. Pulling another card...")
+                newCard = drawCards()
+                totalcard = totalcard + newCard
+                print(f"The dealers card is now {totalcard}.")
+        elif totalcard > 17 and totalcard < 21:
+                print(f"The dealers card is {totalcard}. He is staying.")
+                break
+    else:
+        print(f"The dealer's card is {totalcard} The dealer is over 21. He loses. You win!")    
+            
+    totalcard = dealerCard
+    print(dealerCard)      
+
         
     
 #Main game play. User will either keep drawing cards until 21 or stand if they like their number.
