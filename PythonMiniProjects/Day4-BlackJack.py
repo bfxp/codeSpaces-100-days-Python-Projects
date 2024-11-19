@@ -8,10 +8,7 @@ dealerCard = 0
 #Drawing cards for the face value
 def drawCards():
     return random.randint(1,13)
-
-def twentyOne()
-    
-        
+     
 #Dealer cards. Will have to draw cards until 17 or higher.
 def dealer():
     card1 = drawCards()
