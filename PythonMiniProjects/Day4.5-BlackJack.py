@@ -15,11 +15,16 @@ for suit in suits:
 def shuffle():
     random.shuffle(cards)
 
-#Deal function to deal one card
-def deal():
-    card = cards.pop()
-    return card
+#Deal function to deal one card. Creating the deal function to accept an argument within the parameters.
+def deal(number):
+    #Creating a cards dealt array
+    cards_dealt = []
+    #This will add a card into the deck for each card that has been dealt.
+    for x in range(number):
+        card = cards.pop()
+        cards_dealt.append(card)
+    return cards_dealt
 
 shuffle()
-card = deal()
-print(card)
+cards_dealt = deal(2)
+print(cards_dealt)
