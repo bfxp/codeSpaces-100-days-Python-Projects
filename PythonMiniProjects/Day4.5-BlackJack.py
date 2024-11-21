@@ -25,6 +25,20 @@ def deal(number):
         cards_dealt.append(card)
     return cards_dealt
 
+#main
 shuffle()
 cards_dealt = deal(2)
-print(cards_dealt)
+card = cards_dealt[0]
+rank = card[1]
+
+#Assigning the values of the rank
+if rank == "A":
+    value = 11
+elif rank == "J" or rank == "Q" or rank == "K":
+    value = 10
+else:
+    value = rank
+
+#Key value
+rank_dict = {"rank": rank, "value": value}
+print(rank_dict["rank"], rank_dict["value"])
